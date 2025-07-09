@@ -1,6 +1,9 @@
 <?php
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\TransaksiDetailController;
+use App\Http\Controllers\TransaksiController;
+
 use App\Http\Controllers\PelangganController;
 use Illuminate\Support\Facades\Route;
 
@@ -29,5 +32,12 @@ Route::middleware('auth')->group(function () {
     // Menu barang hanya bisa diakses jika login
     Route::resource('barang', BarangController::class);
     Route::resource('pelanggan', PelangganController::class)->middleware('auth');
+    Route::resource('transaksidetail', TransaksiDetailController::class)->middleware('auth');
+    Route::resource('transaksi', TransaksiController::class)->middleware('auth');
+    Route::get('/laporan/transaksi', [App\Http\Controllers\LaporanController::class, 'transaksi'])->name('laporan.transaksi');
+    Route::get('/laporan/transaksi', [App\Http\Controllers\LaporanController::class, 'cetakTransaksi'])->name('laporan.transaksi');
+    Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
 
 });
+
+

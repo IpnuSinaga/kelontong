@@ -26,22 +26,20 @@
                 <td>{{ $pelanggan->telepon }}</td>
                 <td>{{ $pelanggan->alamat }}</td>
                 <td>
-                    <button 
-                        class="btn btn-warning btn-sm editBtn"
-                        data-id="{{ $pelanggan->id }}"
-                        data-nama="{{ $pelanggan->nama }}"
-                        data-telepon="{{ $pelanggan->telepon }}"
-                        data-alamat="{{ $pelanggan->alamat }}"
-                        data-bs-toggle="modal"
-                        data-bs-target="#editModal">
+                    <button class="btn btn-warning btn-sm editBtn"
+                            data-id="{{ $pelanggan->id }}"
+                            data-nama="{{ $pelanggan->nama }}"
+                            data-telepon="{{ $pelanggan->telepon }}"
+                            data-alamat="{{ $pelanggan->alamat }}"
+                            data-bs-toggle="modal"
+                            data-bs-target="#editModal">
                         Edit
                     </button>
 
-                    <button 
-                        class="btn btn-danger btn-sm deleteBtn"
-                        data-id="{{ $pelanggan->id }}"
-                        data-bs-toggle="modal"
-                        data-bs-target="#deleteModal">
+                    <button class="btn btn-danger btn-sm deleteBtn"
+                            data-id="{{ $pelanggan->id }}"
+                            data-bs-toggle="modal"
+                            data-bs-target="#deleteModal">
                         Hapus
                     </button>
                 </td>
@@ -51,7 +49,7 @@
     </table>
 </div>
 
-{{-- MODAL TAMBAH --}}
+<!-- MODAL TAMBAH -->
 <div class="modal fade" id="createModal" tabindex="-1">
   <div class="modal-dialog">
     <form action="{{ route('pelanggan.store') }}" method="POST" class="modal-content">
@@ -73,7 +71,7 @@
   </div>
 </div>
 
-{{-- MODAL EDIT --}}
+<!-- MODAL EDIT -->
 <div class="modal fade" id="editModal" tabindex="-1">
   <div class="modal-dialog">
     <form method="POST" class="modal-content" id="editForm">
@@ -95,7 +93,7 @@
   </div>
 </div>
 
-{{-- MODAL DELETE --}}
+<!-- MODAL DELETE -->
 <div class="modal fade" id="deleteModal" tabindex="-1">
   <div class="modal-dialog">
     <form method="POST" class="modal-content" id="deleteForm">

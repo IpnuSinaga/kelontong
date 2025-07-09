@@ -10,4 +10,9 @@ class Pelanggan extends Model
     use HasFactory;
 
     protected $fillable = ['nama', 'telepon', 'alamat'];
+
+    public function transaksis()
+    {
+        return $this->hasMany(Transaksi::class);
+    }
 }

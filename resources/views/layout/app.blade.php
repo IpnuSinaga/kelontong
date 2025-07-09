@@ -159,28 +159,23 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{ route('dashboard') }}">
                         <i class="fas fa-chart-line"></i> Dashboard
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{route('transaksi.index')}}">
                         <i class="fas fa-exchange-alt"></i> Transaksi
                     </a>
                 </li>
                 <li>
-                    <a href="{{route('pelanggan.index')}}">
+                    <a href="{{ route('pelanggan.index') }}">
                         <i class="fas fa-users"></i> Pelanggan
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{route('laporan.transaksi')}}">
                         <i class="fas fa-file-invoice-dollar"></i> Laporan
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fas fa-cog"></i> Pengaturan
                     </a>
                 </li>
             </ul>
